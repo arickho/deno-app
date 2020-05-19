@@ -1,5 +1,5 @@
 # deno-app
-Test Playground Written in Deno + Typescript
+Api server using deno
 
 # Installation
 1. Install deno
