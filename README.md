@@ -13,7 +13,11 @@ Test Playground Written in Deno + Typescript
   export PATH="$DENO_INSTALL/bin:$PATH"
   ```
 
-4. Notes
+3. Run
+
+`deno run --allow-net ./src/app.ts`
+
+# Notes
 
 - Run REPL 
 
@@ -25,6 +29,12 @@ Test Playground Written in Deno + Typescript
  without run 	`$ deno https://deno.land/std/examples/welcome.ts`
  eval code 	`$ deno eval "console.log(30933 + 404)"`
 
+Opening `https://deno.land/std/examples/welcome.ts` with the browser, you'll see the codefile in a more user friendly page.
+
+Download the same url via curl or wget will return as text/plain instead of text/html.
+
+Once downloaded, it's now cached by Deno and does not need to be downloaded again.
+
 - Subcommands
 
  bundle 	Bundle module + dependencies into a single file
@@ -32,11 +42,11 @@ Test Playground Written in Deno + Typescript
  completions	generate shell completions
  doc		show documentation for a module
  eval 		eval script
- fmt 		format source files
+ fmt 		format source files (like `gofmt` in Go) (run prettier under the hood)
  help		prints this message 
  info 		show info about cache or info related to source file
  install	install scripts as an executable
- repl		read eval print loop
+ repl		read eval print loop (default)
  run		run a program given a filename or url to the module
  test		run tests
  types		print runetime Typescript declarations
@@ -49,3 +59,25 @@ Test Playground Written in Deno + Typescript
  NO_COLOR 	set to disable color
  HTTP_PROXY	proxy address
  HTTPS_PROXY	same but for HTTPS
+
+- Flags
+
+  `--allow-env` allow environment access
+  `--allow-hrtime` allow high resolution time measurement
+  `--allow-net=<allow-net>` allow network access
+  `--allow-plugin` allow loading plugins
+  `allow-read=<allow-read>` allow file system read access
+  `--allow-run` allow running subprocesses
+  `--allow-write=<allow-write>` allow file system write access
+  `--allow-all` allow all permissions (same as `-A`)
+
+
+## Code Examples
+
+`https://deno.land/std/examples/`
+
+## VSCode Extention
+
+Download Deno from `justjavac`
+
+
