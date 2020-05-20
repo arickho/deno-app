@@ -6,7 +6,9 @@ const server = serve({ port: PORT });
 console.log(`http://localhost:${PORT}`);
 
 for await (const req of server) {
-	const lukeData = await fetch("https://swapi.dev/api/people/1/");
-	const data = await lukeData.json();
-	req.respond({ body: JSON.stringify(data, undefined, 4) });
+  const lukeData = await fetch("https://swapi.dev/api/people/1/");
+
+  const data = await lukeData.json();
+
+  req.respond({ body: JSON.stringify(data, undefined, 4) });
 }

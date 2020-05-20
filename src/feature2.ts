@@ -1,8 +1,8 @@
 import {
-	green,
-	yellow,
-	bold,
-	underline
+  green,
+  yellow,
+  bold,
+  underline,
 } from "https://deno.land/std/fmt/colors.ts";
 
 console.log(`${green("green")} text`);
