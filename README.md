@@ -1,6 +1,6 @@
 # deno-app
 
-Test Playground Written in Deno + Typescript
+Test playground using Deno 
 
 # Installation
 
