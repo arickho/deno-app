@@ -1,7 +1,9 @@
 # deno-app
+
 Test Playground Written in Deno + Typescript
 
 # Installation
+
 1. Install deno
 
   `brew install deno` (mac)
@@ -13,9 +15,32 @@ Test Playground Written in Deno + Typescript
   export PATH="$DENO_INSTALL/bin:$PATH"
   ```
 
-3. Run
+# std lib modules 
 
-`deno run --allow-net ./src/app.ts`
+- (flags) feature 1
+
+  `deno run ./src/feature1.ts -a test -b helloWorld`
+  Parses command line arguments
+
+- (fmt) feature 2
+
+  `deno run ./src/feature2.ts`
+  Colored console.log
+
+- (security) feature 3
+  
+  `deno run --allow-read ./src/feature3.ts`
+  Allow file reading
+
+- (fetch) feature 4
+
+  `deno run --allow-net ./src/feature4.ts`
+  Allow http access + fetch browser support
+
+- (all) feature 5
+
+  `deno run --allow-net ./src/feature5.ts`
+  All features 1-4 in a single file
 
 # Notes
 
